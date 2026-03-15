@@ -5,18 +5,49 @@ import Footer from '../components/Footer.astro';
 ---
 <BaseLayout title="About - Orhay's Blog" description="About Orhay Benaim">
   <Header slot="header" />
-  <h1>About</h1>
-  <p>
-    Hi, I'm Orhay. I'm a software engineer and this is where I share what I've learned —
-    technical tutorials, guides, and things I find interesting along the way.
-  </p>
-  <p>
-    If you have questions or want to reach out, find me on
-    <a href="https://github.com/OrhayBenaim" target="_blank">GitHub</a>.
-  </p>
+  <div class="glass-panel">
+    <h1>About</h1>
+    <p>
+      Hi, I'm Orhay. I'm a software engineer and this is where I share what I've learned —
+      technical tutorials, guides, and things I find interesting along the way.
+    </p>
+    <p>
+      If you have questions or want to reach out, find me on
+      <a href="https://github.com/OrhayBenaim" target="_blank">GitHub</a>.
+    </p>
+  </div>
   <Footer slot="footer" />
 </BaseLayout>
 
 <style>
-  h1 { margin-top: 0; }
+  .glass-panel {
+    background: var(--bg-glass);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: var(--glass-border);
+    border-radius: var(--glass-radius);
+    box-shadow: var(--glass-shadow);
+    padding: 2.5rem;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin-top: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    color: var(--dust-grey);
+  }
+
+  p {
+    color: var(--dry-sage);
+    line-height: 1.8;
+  }
+
+  @media (max-width: 640px) {
+    .glass-panel {
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+  }
 </style>
