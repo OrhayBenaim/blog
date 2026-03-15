@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const tagCounts = new Map<string, number>();
+posts.forEach(post => {
+  post.data.tags.forEach(tag => {
+    tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+  });
+});
+const tags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
+---
+<BaseLayout title="Tags - Orhay's Blog" description="Browse posts by tag">
+  <Header slot="header" />
+  <h1>Tags</h1>
+  <div class="tags">
+    {tags.map(([tag, count]) => (
+      <a href={`/blog/tags/${tag}/`} class="tag">
+        #{tag} <span class="count">({count})</span>
+      </a>
+    ))}
+  </div>
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  h1 { margin-top: 0; }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .tag {
+    background: var(--bg-secondary);
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+
+  .tag:hover {
+    text-decoration: none;
+    background: var(--border);
+  }
+
+  .count {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+</style>
