@@ -142,11 +142,12 @@ def cmd_video(args):
         attempts += 1
         print(f"  Polling... (attempt {attempts})")
         time.sleep(args.poll_interval)
-        operation = client.operations.get_videos_operation(operation=operation)
+        operation = client.operations.get(operation)
 
     for i, vid in enumerate(operation.response.generated_videos):
         out = args.output if args.count == 1 else args.output.replace(".mp4", f"-{i}.mp4")
-        client.files.download(file=vid.video, download_path=out)
+        client.files.download(file=vid.video)
+        vid.video.save(out)
         print(f"  Saved: {out}")
 
 

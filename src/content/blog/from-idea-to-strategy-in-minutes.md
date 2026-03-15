@@ -11,7 +11,7 @@ This is the first post in a series where I walk through real examples of this tw
 
 The whole thing took minutes. Here's how it works.
 
-![A lightbulb with ideas flowing into a polished strategy document](/blog/from-idea-to-strategy-hero.png)
+![A lightbulb with ideas flowing into a polished strategy document](/blog/blog/from-idea-to-strategy-hero.png)
 
 ## The Setup: Two Layers
 
@@ -29,7 +29,7 @@ You can find it here: [Superpowers on Claude Code Marketplace](https://marketpla
 
 The brainstorming layer is the bridge between "I have a vague idea" and "here's a tight brief that a specialist can run with."
 
-![Brainstorming scene flowing into a specialist workspace](/blog/two-layers-concept.png)
+![Brainstorming scene flowing into a specialist workspace](/blog/blog/two-layers-concept.png)
 
 ## The Walkthrough
 
@@ -89,7 +89,7 @@ Three exchanges. That's it. In about two minutes I went from "I need a TikTok st
 
 Here's the part I like most. The brainstorming layer packaged everything up and handed it to the TikTok Strategist agent. I didn't have to write a brief, copy-paste context, or re-explain anything. The specialist picked up right where the brainstorming left off.
 
-![Phone with fitness workout surrounded by strategy icons](/blog/tiktok-strategy-fitness.png)
+<video src="/blog/blog/tiktok-strategy-fitness.mp4" autoplay loop muted playsinline style="max-width: 300px; margin: 0 auto; display: block; border-radius: 12px;"></video>
 
 ### What the Specialist Produced
 
