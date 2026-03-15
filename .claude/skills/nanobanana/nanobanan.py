@@ -70,7 +70,7 @@ def with_retry(fn, max_retries=3):
 
 def cmd_image(args):
     client = get_client()
-    print(f"Generating image → {args.output}")
+    print(f"Generating image -> {args.output}")
 
     modalities = ["IMAGE"] if args.text_only else ["TEXT", "IMAGE"]
 
@@ -90,8 +90,8 @@ def cmd_image(args):
             config=types.GenerateContentConfig(
                 response_modalities=modalities,
                 image_config=types.ImageConfig(
-                    aspectRatio=args.aspect_ratio,
-                    imageSize=args.resolution,
+                    aspect_ratio=args.aspect_ratio,
+                    image_size=args.resolution,
                 ),
             ),
         )
@@ -102,7 +102,9 @@ def cmd_image(args):
         if part.text:
             print(f"  Model text: {part.text}")
         elif part.inline_data:
-            data = base64.b64decode(part.inline_data.data)
+            data = part.inline_data.data
+            if isinstance(data, str):
+                data = base64.b64decode(data)
             with open(args.output, "wb") as f:
                 f.write(data)
             print(f"  Saved: {args.output} ({len(data)} bytes)")
@@ -110,7 +112,7 @@ def cmd_image(args):
 
 def cmd_video(args):
     client = get_client()
-    print(f"Generating video → {args.output}")
+    print(f"Generating video -> {args.output}")
 
     kwargs = {
         "model": "veo-3.1-generate-preview",
