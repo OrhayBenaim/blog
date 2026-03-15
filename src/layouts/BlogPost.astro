@@ -24,7 +24,7 @@ function formatDate(date: Date): string {
 ---
 <BaseLayout title={title} description={description}>
   <Header slot="header" />
-  <article>
+  <article class="glass-article">
     <header class="post-header">
       <h1>{title}</h1>
       <div class="post-meta">
@@ -50,19 +50,34 @@ function formatDate(date: Date): string {
 </BaseLayout>
 
 <style>
+  .glass-article {
+    background: var(--bg-glass);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: var(--glass-border);
+    border-radius: var(--glass-radius);
+    box-shadow: var(--glass-shadow);
+    padding: 2.5rem;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
   .post-header {
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(163, 177, 138, 0.15);
   }
 
   .post-header h1 {
     margin-top: 0;
     font-size: 2.25rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    color: var(--dust-grey);
   }
 
   .post-meta {
-    color: var(--text-muted);
+    color: var(--dry-sage);
     font-size: 0.9rem;
     margin-top: 0.5rem;
   }
@@ -75,17 +90,19 @@ function formatDate(date: Date): string {
   }
 
   .tag {
-    font-size: 0.85rem;
-    color: var(--accent);
-    background: var(--bg-secondary);
-    padding: 0.15rem 0.6rem;
-    border-radius: 4px;
-    border: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--fern);
+    background: rgba(88, 129, 87, 0.15);
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    border: 1px solid rgba(88, 129, 87, 0.2);
+    transition: background var(--transition-fast), color var(--transition-fast);
   }
 
   .tag:hover {
     text-decoration: none;
-    background: var(--border);
+    background: rgba(88, 129, 87, 0.3);
+    color: var(--dust-grey);
   }
 
   .post-content {
@@ -97,9 +114,22 @@ function formatDate(date: Date): string {
   }
 
   .post-content :global(blockquote) {
-    border-left: 3px solid var(--accent);
+    border-left: 3px solid var(--fern);
     padding-left: 1rem;
-    color: var(--text-muted);
+    color: var(--dry-sage);
     margin: 1.5rem 0;
+  }
+
+  .post-content :global(pre) {
+    background: var(--bg-glass-dark) !important;
+    border: var(--glass-border);
+    border-radius: 12px;
+  }
+
+  @media (max-width: 640px) {
+    .glass-article {
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
   }
 </style>
