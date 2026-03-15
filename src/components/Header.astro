@@ -1,0 +1,60 @@
+---
+const navItems = [
+  { label: 'Home', href: '/blog/' },
+  { label: 'About', href: '/blog/about/' },
+  { label: 'Tags', href: '/blog/tags/' },
+];
+---
+<header>
+  <nav>
+    <a href="/blog/" class="logo">Orhay's Blog</a>
+    <div class="nav-links">
+      {navItems.map(item => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+      <a href="/blog/rss.xml" target="_blank" title="RSS Feed">RSS</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-secondary);
+  }
+
+  nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--text);
+  }
+
+  .logo:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .nav-links a {
+    color: var(--text-muted);
+  }
+
+  .nav-links a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>
