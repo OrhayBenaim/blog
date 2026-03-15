@@ -9,7 +9,7 @@ interface Props {
 const { title, description = "Orhay's technical blog" } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bg="full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,6 +79,43 @@ const { title, description = "Orhay's technical blog" } = Astro.props;
           radial-gradient(ellipse at 40% 80%, rgba(52, 78, 65, 0.3) 0%, transparent 50%),
           linear-gradient(135deg, #2d4a37 0%, #344e41 25%, #3a5a40 50%, #344e41 75%, #2d4a37 100%);
         background-attachment: fixed;
+      }
+
+      /* Forest background — Version A: Full background */
+      html[data-bg="full"] body {
+        background-image:
+          linear-gradient(to bottom, rgba(26, 46, 26, 0.6) 0%, rgba(26, 46, 26, 0.7) 100%),
+          url('/blog/images/forest-bg.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      /* Mobile fallback — fixed attachment not well supported on iOS/Android */
+      @media (max-width: 768px) {
+        html[data-bg="full"] body {
+          background-attachment: scroll;
+        }
+      }
+
+      /* Forest background — Version C: Subtle texture blend */
+      html[data-bg="texture"] body {
+        position: relative;
+      }
+
+      html[data-bg="texture"] body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/blog/images/forest-bg.webp');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.15;
+        z-index: -1;
+        pointer-events: none;
       }
 
       a {
