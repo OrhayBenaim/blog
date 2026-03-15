@@ -1,0 +1,105 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  tags: string[];
+  minutesRead?: string;
+}
+
+const { title, description, pubDate, updatedDate, tags, minutesRead } = Astro.props;
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+<BaseLayout title={title} description={description}>
+  <Header slot="header" />
+  <article>
+    <header class="post-header">
+      <h1>{title}</h1>
+      <div class="post-meta">
+        <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+        {updatedDate && (
+          <span> · Updated <time datetime={updatedDate.toISOString()}>{formatDate(updatedDate)}</time></span>
+        )}
+        {minutesRead && <span> · {minutesRead}</span>}
+      </div>
+      {tags.length > 0 && (
+        <div class="post-tags">
+          {tags.map(tag => (
+            <a href={`/blog/tags/${tag}/`} class="tag">#{tag}</a>
+          ))}
+        </div>
+      )}
+    </header>
+    <div class="post-content">
+      <slot />
+    </div>
+  </article>
+  <Footer slot="footer" />
+</BaseLayout>
+
+<style>
+  .post-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .post-header h1 {
+    margin-top: 0;
+    font-size: 2.25rem;
+  }
+
+  .post-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+    color: var(--accent);
+    background: var(--bg-secondary);
+    padding: 0.15rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  .tag:hover {
+    text-decoration: none;
+    background: var(--border);
+  }
+
+  .post-content {
+    font-size: 1.05rem;
+  }
+
+  .post-content :global(h2) {
+    margin-top: 2.5rem;
+  }
+
+  .post-content :global(blockquote) {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    color: var(--text-muted);
+    margin: 1.5rem 0;
+  }
+</style>
