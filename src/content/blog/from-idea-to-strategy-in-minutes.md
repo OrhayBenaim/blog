@@ -25,7 +25,7 @@ claude plugin add superpowers
 
 You can find it here: [Superpowers on Claude Code Marketplace](https://marketplace.claudecode.dev/plugins/superpowers)
 
-**Layer 2: Specialist.** Once your idea is clear, the brainstorming layer hands it off to a specialist agent. In this case, a TikTok Strategist. These agents are built with deep knowledge of their specific domain. They don't ask you 20 questions. They take a clear brief and produce real, actionable output.
+**Layer 2: Specialist.** Once your idea is clear, the brainstorming layer hands it off to a specialist agent. In this case, a [TikTok Strategist](https://github.com/msitarzewski/agency-agents/blob/main/marketing/marketing-tiktok-strategist.md) from the [Agency Agents](https://github.com/msitarzewski/agency-agents) collection. These agents are built with deep knowledge of their specific domain. They don't ask you 20 questions. They take a clear brief and produce real, actionable output.
 
 The brainstorming layer is the bridge between "I have a vague idea" and "here's a tight brief that a specialist can run with."
 
@@ -141,25 +141,20 @@ I was genuinely surprised by the quality. The content pillar split felt well-rea
 
 Is it perfect? No. You'd still want a human to review the ideas, adjust for what's actually trending right now, and add brand-specific context that no AI can fully understand. But as a starting point, it's better than most first drafts I've seen from real strategy decks.
 
-## What's Coming Next
-
-This is the first post in the series. Here's what I'm planning to cover next:
-
-- **Building a landing page from a Figma design** - Going from design file to working code with an AI agent
-- **Generating images and videos with AI (Nano Banana)** - Creating visual content without a design team
-- **Writing a full content strategy across platforms** - Not just TikTok, but a coordinated multi-platform plan
-- **Optimizing an app store listing** - Using a specialist agent to improve App Store and Play Store presence
-
-Each post follows the same format: a real walkthrough with a real example, showing both the brainstorming process and the specialist output.
-
 ## Get Started
 
 If you want to try this workflow yourself, here's what you need:
+
+**Superpowers** (the brainstorming layer):
 
 ```bash
 claude plugin add superpowers
 ```
 
 [Superpowers on Claude Code Marketplace](https://marketplace.claudecode.dev/plugins/superpowers)
+
+**TikTok Strategist** (the specialist agent used in this post):
+
+[TikTok Strategist on GitHub](https://github.com/msitarzewski/agency-agents/blob/main/marketing/marketing-tiktok-strategist.md) — part of the [Agency Agents](https://github.com/msitarzewski/agency-agents) collection, which includes specialists for SEO, content creation, brand strategy, and more.
 
 The brainstorming layer will guide you through the rest, including finding and using the right specialist for whatever you're building.
