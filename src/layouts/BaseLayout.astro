@@ -9,7 +9,7 @@ interface Props {
 const { title, description = "Orhay's technical blog" } = Astro.props;
 ---
 <!doctype html>
-<html lang="en" data-bg="full">
+<html lang="en" data-bg="texture">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -98,7 +98,7 @@ const { title, description = "Orhay's technical blog" } = Astro.props;
         }
       }
 
-      /* Forest background — Version C: Subtle texture blend */
+      /* Forest background — Version C: Blurred forest with dark overlay */
       html[data-bg="texture"] body {
         position: relative;
       }
@@ -113,7 +113,19 @@ const { title, description = "Orhay's technical blog" } = Astro.props;
         background-image: url('/blog/images/forest-bg.webp');
         background-size: cover;
         background-position: center;
-        opacity: 0.15;
+        filter: blur(6px);
+        z-index: -2;
+        pointer-events: none;
+      }
+
+      html[data-bg="texture"] body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
         z-index: -1;
         pointer-events: none;
       }
