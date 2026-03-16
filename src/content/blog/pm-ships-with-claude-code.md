@@ -1,5 +1,5 @@
 ---
-title: "How a Product Manager Ships with Claude Code (No Coding Required)"
+title: "How a Product Manager Ships with Claude Code"
 description: "A product manager's real walkthrough: from a vague idea to a full spec, stakeholder video, and Jira tickets using Claude Code AI agents. No code written."
 pubDate: 2026-03-16
 pubTime: "18:00"
