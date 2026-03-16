@@ -100,7 +100,8 @@
       "Read(//c/Users/Orhay/git/**)",
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Orhay/.claude/skills/skill-creator/scripts/init_skill.py\" image-optimizer --path \"C:/Users/Orhay/.claude/skills\")",
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Orhay/.claude/skills/skill-creator/scripts/package_skill.py\" \"C:/Users/Orhay/.claude/skills/image-optimizer\" 2>&1 | head -30)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(GEMINI_API_KEY=\"$GEMINI_API_KEY\" python \"C:/Users/Orhay/.claude/skills/nanobanana/nanobanan.py\" image --prompt 'A minimal, modern favicon icon design on a solid dark forest green background \\(#344e41\\). The icon features a stylized letter \"O\" constructed from clean geometric lines, with a subtle circuit-board or neural-network motif integrated into the letterform — small nodes and connecting paths that suggest AI and technology. The \"O\" is rendered in a gradient from muted purple \\(#815788\\) to soft lavender \\(#8a92b1\\), with a faint frosted glass translucency effect on the inner fill. The design is extremely simple and legible at small sizes, using bold strokes and minimal detail. Flat vector icon style, no photorealism, no shadows, no 3D effects. Sharp edges, pixel-perfect clarity. The composition is centered with generous padding around the mark. Style: tech startup logo, SVG icon aesthetic, geometric sans-serif letterform. Clean, crisp, professional. Square format, solid color background, no gradients on the background.' --output \"C:/Users/Orhay/git/blog/public/favicon.png\" --aspect-ratio 1:1 --resolution 1K --text-only 2>&1)"
     ]
   }
 }
