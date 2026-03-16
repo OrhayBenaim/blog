@@ -1,6 +1,6 @@
 ---
 title: "From Idea to Strategy in Minutes"
-description: "How I use AI agents to brainstorm ideas and hand them off to specialists. A real walkthrough of going from a vague idea to a full TikTok strategy."
+description: "How I use AI agents to brainstorm, plan, and execute. A real walkthrough of going from a vague idea to a full TikTok strategy with generated visual content."
 pubDate: 2026-03-16
 tags: ["ai", "workflow", "claude-code", "agents"]
 ---
@@ -39,7 +39,7 @@ Let me show you the actual process, from first prompt to finished strategy.
 
 I kicked things off with a pretty standard brief:
 
-> **Me:** I need a TikTok content strategy for "PulseForm" -- a fitness brand targeting 18-28 year olds. They sell resistance bands and home workout programs. Their voice is motivating but not preachy.
+> **Me:** I need a TikTok content strategy for "PulseForm", a fitness brand targeting 18-28 year olds. They sell resistance bands and home workout programs. Their voice is motivating but not preachy.
 
 ### Defining the Goal
 
@@ -85,15 +85,35 @@ That's already useful. I came in thinking "we need a TikTok strategy" and within
 
 Three exchanges. That's it. In about two minutes I went from "I need a TikTok strategy" to a clear brief: brand awareness through trend-riding fitness content with a strong visual identity and no hard selling.
 
-### The Handoff
+### The Plan
 
-Here's the part I like most. The brainstorming layer packaged everything up and handed it to the TikTok Strategist agent. I didn't have to write a brief, copy-paste context, or re-explain anything. The specialist picked up right where the brainstorming left off.
+Here's where it gets interesting. The brainstorming layer didn't just summarize my choices and move on. It produced an actual implementation plan, a structured document with concrete steps and, crucially, the right tools assigned to each one.
+
+The plan looked something like this:
+
+> **Step 1:** Use the **TikTok Strategist** agent to build a full content strategy based on the brief (brand awareness, trend-riding content, strong visual identity, no hard selling).
+>
+> **Step 2:** Use **NanoBanana** to generate sample visual content, mood boards, and example video thumbnails that match the PulseForm aesthetic (warm lighting, orange brand color, real spaces).
+>
+> **Step 3:** Compile everything into a cohesive strategy package with both the written plan and visual references.
+
+The brainstorming layer knew which specialists existed and matched them to the job. I didn't need to tell it "use the TikTok agent" or "generate images with NanoBanana." It figured out the right combination based on what we'd discussed.
+
+That's the real value of the brainstorming layer. It's not just a conversation. It's a planner that understands what tools are available and how to sequence them.
+
+### From Plan to Execution
+
+With the plan sitting right there in the conversation, executing it was one sentence:
+
+> **Me:** Execute this plan.
+
+That's it. Superpowers picked up the plan and started working through each step, dispatching the TikTok Strategist agent for the strategy and NanoBanana for the visual content. I didn't have to copy-paste context between tools, re-explain the brief, or manually coordinate anything. The plan carried all the context forward.
 
 <video src="/blog/blog/tiktok-strategy-fitness.mp4" autoplay loop muted playsinline style="max-width: 300px; margin: 0 auto; display: block; border-radius: 12px;"></video>
 
-### What the Specialist Produced
+### What Came Out the Other Side
 
-The TikTok Strategist came back with a full strategy. Here are the best parts.
+The TikTok Strategist came back with a full strategy, and NanoBanana generated visual content to go with it. Here are the best parts of the strategy.
 
 **Content Pillars (40/30/20/10 Split)**
 
@@ -111,8 +131,6 @@ These were my favorites from the batch:
 - **"POV: You try to work out at home but..."** - Comedy skit where the creator keeps getting interrupted. Final shot: one perfect rep, triumphant face.
 - **"She said bands don't build real muscle"** - Creator doesn't argue. Just shows their workout, intense, sweating. No words needed.
 - **"Resistance band ASMR but make it chaotic"** - Start with satisfying ASMR then escalate into chaos.
-
-Every single one of these feels like something you'd actually watch. Not branded content that people skip past.
 
 **Posting Schedule**
 
@@ -153,8 +171,16 @@ claude plugin add superpowers
 
 [Superpowers on Claude Code Marketplace](https://marketplace.claudecode.dev/plugins/superpowers)
 
-**TikTok Strategist** (the specialist agent used in this post):
+**TikTok Strategist** (the strategy specialist used in this post):
 
 [TikTok Strategist on GitHub](https://github.com/msitarzewski/agency-agents/blob/main/marketing/marketing-tiktok-strategist.md) — part of the [Agency Agents](https://github.com/msitarzewski/agency-agents) collection, which includes specialists for SEO, content creation, brand strategy, and more.
 
-The brainstorming layer will guide you through the rest, including finding and using the right specialist for whatever you're building.
+**NanoBanana** (the visual content generator used in this post):
+
+```bash
+claude skill add nanobanana
+```
+
+NanoBanana uses Google Gemini to generate images and video from text prompts. The brainstorming layer brought it in automatically for the visual identity work.
+
+The brainstorming layer will guide you through the rest. It knows which tools are available, picks the right ones for your project, builds a plan, and executes it when you're ready.
