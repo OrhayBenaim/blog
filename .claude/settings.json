@@ -8,6 +8,10 @@
           {
             "type": "command",
             "command": "node .claude/hooks/protect-files.js"
+          },
+           {
+            "type": "command",
+            "command": "node .claude/hooks/enforce-worktree.js"
           }
         ]
       }
