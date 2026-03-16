@@ -125,7 +125,16 @@
       "Bash(C:/Users/Orhay/git/davinci-resolve-mcp/venv/Scripts/python.exe -c \"import struct; print\\(struct.calcsize\\('P'\\) * 8, 'bit'\\)\" 2>&1)",
       "Bash(PYTHONIOENCODING=utf-8 python \"C:\\\\Users\\\\Orhay\\\\.claude\\\\skills\\\\skill-creator\\\\scripts\\\\init_skill.py\" security-audit --path \"C:\\\\Users\\\\Orhay\\\\.claude\\\\skills\")",
       "Bash(PYTHONIOENCODING=utf-8 python \"C:\\\\Users\\\\Orhay\\\\.claude\\\\skills\\\\skill-creator\\\\scripts\\\\quick_validate.py\" \"C:\\\\Users\\\\Orhay\\\\.claude\\\\skills\\\\security-audit\" 2>&1)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(PYTHONIOENCODING=utf-8 python C:/Users/Orhay/.claude/skills/skill-creator/scripts/init_skill.py jira-manager --path C:/Users/Orhay/.claude/skills)",
+      "Bash(PYTHONIOENCODING=utf-8 PYTHONUTF8=1 python C:/Users/Orhay/.claude/skills/skill-creator/scripts/init_skill.py jira-manager --path C:/Users/Orhay/.claude/skills)",
+      "Bash(rm:*)",
+      "Bash(PYTHONUTF8=1 python C:/Users/Orhay/.claude/skills/skill-creator/scripts/quick_validate.py C:/Users/Orhay/.claude/skills/jira-manager)",
+      "Bash(acli:*)",
+      "Bash(winget search:*)",
+      "Bash(npm list:*)",
+      "Bash(git:*)",
+      "Bash(powershell -Command \"Remove-Item -Recurse -Force 'C:\\\\Users\\\\Orhay\\\\git\\\\blog\\\\.claude\\\\worktrees\\\\add-time-field-for-sorting'\" && git worktree prune && git branch -D worktree-add-time-field-for-sorting)"
     ]
   }
 }
