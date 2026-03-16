@@ -197,6 +197,11 @@ You can create short Remotion video mocks to visually demonstrate a feature to s
 - Present the exported video file path for the user to review
 - Never ask the user to run build, render, or preview commands
 
+### Post-Approval Cleanup
+- After the user approves the video, **clean up all Remotion source files** (composition code, assets, config, node_modules, etc.)
+- The only artifact that should remain is the **final rendered video file**
+- Do not leave scaffolding, temporary files, or Remotion project files behind
+
 ### What It Is NOT
 - Not a production video or marketing asset
 - Not a substitute for the actual task list — always create the task list first
