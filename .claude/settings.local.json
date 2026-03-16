@@ -101,7 +101,31 @@
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Orhay/.claude/skills/skill-creator/scripts/init_skill.py\" image-optimizer --path \"C:/Users/Orhay/.claude/skills\")",
       "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Orhay/.claude/skills/skill-creator/scripts/package_skill.py\" \"C:/Users/Orhay/.claude/skills/image-optimizer\" 2>&1 | head -30)",
       "Bash(node:*)",
-      "Bash(GEMINI_API_KEY=\"$GEMINI_API_KEY\" python \"C:/Users/Orhay/.claude/skills/nanobanana/nanobanan.py\" image --prompt 'A minimal, modern favicon icon design on a solid dark forest green background \\(#344e41\\). The icon features a stylized letter \"O\" constructed from clean geometric lines, with a subtle circuit-board or neural-network motif integrated into the letterform — small nodes and connecting paths that suggest AI and technology. The \"O\" is rendered in a gradient from muted purple \\(#815788\\) to soft lavender \\(#8a92b1\\), with a faint frosted glass translucency effect on the inner fill. The design is extremely simple and legible at small sizes, using bold strokes and minimal detail. Flat vector icon style, no photorealism, no shadows, no 3D effects. Sharp edges, pixel-perfect clarity. The composition is centered with generous padding around the mark. Style: tech startup logo, SVG icon aesthetic, geometric sans-serif letterform. Clean, crisp, professional. Square format, solid color background, no gradients on the background.' --output \"C:/Users/Orhay/git/blog/public/favicon.png\" --aspect-ratio 1:1 --resolution 1K --text-only 2>&1)"
+      "Bash(GEMINI_API_KEY=\"$GEMINI_API_KEY\" python \"C:/Users/Orhay/.claude/skills/nanobanana/nanobanan.py\" image --prompt 'A minimal, modern favicon icon design on a solid dark forest green background \\(#344e41\\). The icon features a stylized letter \"O\" constructed from clean geometric lines, with a subtle circuit-board or neural-network motif integrated into the letterform — small nodes and connecting paths that suggest AI and technology. The \"O\" is rendered in a gradient from muted purple \\(#815788\\) to soft lavender \\(#8a92b1\\), with a faint frosted glass translucency effect on the inner fill. The design is extremely simple and legible at small sizes, using bold strokes and minimal detail. Flat vector icon style, no photorealism, no shadows, no 3D effects. Sharp edges, pixel-perfect clarity. The composition is centered with generous padding around the mark. Style: tech startup logo, SVG icon aesthetic, geometric sans-serif letterform. Clean, crisp, professional. Square format, solid color background, no gradients on the background.' --output \"C:/Users/Orhay/git/blog/public/favicon.png\" --aspect-ratio 1:1 --resolution 1K --text-only 2>&1)",
+      "Bash(agent-browser close:*)",
+      "mcp__plugin_figma_figma__whoami",
+      "Bash(winget install:*)",
+      "Bash(export:*)",
+      "Read(//c/ffmpeg/bin/**)",
+      "Read(//c/Program Files/FFmpeg/bin/**)",
+      "Bash(where.exe ffmpeg:*)",
+      "Bash(cmd.exe //c \"where ffmpeg\" 2>/dev/null)",
+      "Read(//c/Users/Orhay/AppData/Local/Microsoft/WinGet/Packages/**)",
+      "Read(//c/Users/Orhay/AppData/Local/**)",
+      "Bash(cp:*)",
+      "Bash(echo:*)",
+      "Bash(tasklist:*)",
+      "Bash(agent-browser eval:*)",
+      "Bash(py:*)",
+      "Bash(git clone:*)",
+      "Bash(claude mcp:*)",
+      "Bash(C:/Users/Orhay/git/davinci-resolve-mcp/venv/Scripts/python.exe --version 2>&1)",
+      "Bash(C:/Users/Orhay/git/davinci-resolve-mcp/venv/Scripts/python.exe -c \"import ctypes; ctypes.CDLL\\(r'C:/Program Files/Blackmagic Design/DaVinci Resolve/fusionscript.dll'\\)\" 2>&1)",
+      "Bash(C:/Users/Orhay/git/davinci-resolve-mcp/venv/Scripts/python.exe -c \"import sys; sys.path.append\\(r'C:/ProgramData/Blackmagic Design/DaVinci Resolve/Support/Developer/Scripting/Modules'\\); import DaVinciResolveScript; r = DaVinciResolveScript.scriptapp\\('Resolve'\\); print\\('Resolve object:', r\\)\" 2>&1)",
+      "Bash(C:/Users/Orhay/git/davinci-resolve-mcp/venv/Scripts/python.exe -c \"import struct; print\\(struct.calcsize\\('P'\\) * 8, 'bit'\\)\" 2>&1)",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:\\\\Users\\\\Orhay\\\\.claude\\\\skills\\\\skill-creator\\\\scripts\\\\init_skill.py\" security-audit --path \"C:\\\\Users\\\\Orhay\\\\.claude\\\\skills\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:\\\\Users\\\\Orhay\\\\.claude\\\\skills\\\\skill-creator\\\\scripts\\\\quick_validate.py\" \"C:\\\\Users\\\\Orhay\\\\.claude\\\\skills\\\\security-audit\" 2>&1)",
+      "Bash(python3:*)"
     ]
   }
 }
