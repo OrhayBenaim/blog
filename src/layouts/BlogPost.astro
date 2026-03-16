@@ -65,7 +65,7 @@ function formatDate(date: Date): string {
   .post-header {
     margin-bottom: 2.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(163, 177, 138, 0.15);
+    border-bottom: 1px solid rgba(42, 157, 143, 0.15);
   }
 
   .post-header h1 {
@@ -73,11 +73,11 @@ function formatDate(date: Date): string {
     font-size: 2.25rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
-    color: var(--dust-grey);
+    color: var(--text);
   }
 
   .post-meta {
-    color: var(--dry-sage);
+    color: var(--text-muted);
     font-size: 0.9rem;
     margin-top: 0.5rem;
   }
@@ -91,18 +91,18 @@ function formatDate(date: Date): string {
 
   .tag {
     font-size: 0.8rem;
-    color: var(--dry-sage);
-    background: rgba(88, 129, 87, 0.25);
+    color: var(--text-muted);
+    background: rgba(42, 157, 143, 0.2);
     padding: 0.2rem 0.65rem;
     border-radius: 20px;
-    border: 1px solid rgba(88, 129, 87, 0.4);
+    border: 1px solid rgba(42, 157, 143, 0.35);
     transition: background var(--transition-fast), color var(--transition-fast);
   }
 
   .tag:hover {
     text-decoration: none;
-    background: rgba(88, 129, 87, 0.3);
-    color: var(--dust-grey);
+    background: rgba(42, 157, 143, 0.3);
+    color: var(--text);
   }
 
   .post-content {
@@ -114,9 +114,9 @@ function formatDate(date: Date): string {
   }
 
   .post-content :global(blockquote) {
-    border-left: 3px solid var(--fern);
+    border-left: 3px solid var(--accent);
     padding-left: 1rem;
-    color: var(--dry-sage);
+    color: var(--text-muted);
     margin: 1.5rem 0;
   }
 

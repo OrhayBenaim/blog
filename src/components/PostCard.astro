@@ -67,16 +67,16 @@ function formatDate(date: Date): string {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--dust-grey);
+    color: var(--text);
     transition: color var(--transition-fast);
   }
 
   .post-card:hover h2 {
-    color: var(--fern);
+    color: var(--accent);
   }
 
   .card-link p {
-    color: var(--dry-sage);
+    color: var(--text-muted);
     margin: 0;
     font-size: 0.9rem;
     line-height: 1.5;
@@ -88,11 +88,11 @@ function formatDate(date: Date): string {
     align-items: center;
     margin-top: 1rem;
     padding-top: 0.75rem;
-    border-top: 1px solid rgba(163, 177, 138, 0.1);
+    border-top: 1px solid rgba(42, 157, 143, 0.1);
   }
 
   time {
-    color: var(--dry-sage);
+    color: var(--text-muted);
     font-size: 0.8rem;
   }
 
@@ -104,17 +104,17 @@ function formatDate(date: Date): string {
 
   .tag {
     font-size: 0.75rem;
-    color: var(--dry-sage);
-    background: rgba(88, 129, 87, 0.25);
+    color: var(--text-muted);
+    background: rgba(42, 157, 143, 0.2);
     padding: 0.15rem 0.5rem;
     border-radius: 20px;
-    border: 1px solid rgba(88, 129, 87, 0.4);
+    border: 1px solid rgba(42, 157, 143, 0.35);
     transition: background var(--transition-fast), color var(--transition-fast);
   }
 
   .tag:hover {
-    background: rgba(88, 129, 87, 0.3);
-    color: var(--dust-grey);
+    background: rgba(42, 157, 143, 0.3);
+    color: var(--text);
     text-decoration: none;
   }
 </style>
