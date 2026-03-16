@@ -31,7 +31,7 @@ I started with the Superpowers plugin for Claude Code. If you've read [the previ
 
 I described the problem and it started digging into the details:
 
-> **Me:** Blog posts all share the same pubDate and the sort order is random on the homepage. I need a way to control the ordering.
+> **Me:** Blog posts all share the same date and the sort order is random on the homepage. I need a way to control the ordering.
 
 > **Claude:** Should this be a schema-level change that adds a new field, or would you prefer to change the existing pubDate to accept full datetime strings? A new field keeps backward compatibility clean since existing posts won't need to change their pubDate format. Changing the existing field is simpler but means updating every post and potentially affecting date display.
 
@@ -44,7 +44,9 @@ I described the problem and it started digging into the details:
 Once the brainstorming layer had enough context, it produced an execution plan:
 
 > **Step 1:** Use the Senior PM agent to write a full feature spec
+>
 > **Step 2:** Use Remotion to generate a stakeholder video explaining the feature
+>
 > **Step 3:** Use the Jira Manager to create development tickets from the spec
 
 ## "Execute this plan."
@@ -72,7 +74,7 @@ The level of detail went further than I expected. A backward compatibility table
 
 ### The Stakeholder Video
 
-The agent used Remotion to generate a short video explaining the feature and why it matters. This is the kind of artifact you'd normally spend time creating in Loom or a slide deck before a stakeholder review. The video covers the problem, the solution, and the scope of changes in a format that someone outside the engineering team can actually follow.
+The agent used <a href="https://www.remotion.dev/" target="_blank" rel="noopener noreferrer">Remotion</a> to generate a short video explaining the feature and why it matters. This is the kind of artifact you'd normally spend time creating in Google Slides before a stakeholder review. The video covers the problem, the solution, and the scope of changes in a format that someone outside the engineering team can actually follow.
 
 <video src="/blog/blog/pm-ships-pubtime-feature.mp4" autoplay loop muted playsinline style="max-width: 100%; margin: 0 auto; display: block; border-radius: 12px;"></video>
 
