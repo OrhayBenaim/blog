@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PROJECT_NAME}} - Security Audit Report</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+            background: #0a0a0f;
+            color: #c8c8d0;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container { max-width: 960px; margin: 0 auto; }
+
+        header {
+            border-bottom: 1px solid #1a1a2e;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: #ff3333;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: #111118;
+            border: 1px solid #1a1a2e;
+            border-radius: 8px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.5rem;
+        }
+
+        .stat-number.critical { color: #ff3333; }
+        .stat-number.high { color: #ff8800; }
+        .stat-number.medium { color: #ffcc00; }
+        .stat-number.total { color: #c8c8d0; }
+
+        h2 {
+            font-size: 1.1rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #1a1a2e;
+        }
+
+        .finding {
+            background: #111118;
+            border: 1px solid #1a1a2e;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 0.75rem 0;
+            transition: border-color 0.2s;
+        }
+
+        .finding:hover { border-color: #333; }
+
+        .finding.critical { border-left: 3px solid #ff3333; }
+        .finding.high { border-left: 3px solid #ff8800; }
+        .finding.medium { border-left: 3px solid #ffcc00; }
+        .finding.low { border-left: 3px solid #44aa44; }
+
+        .finding-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .severity-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .severity-badge.critical { background: #ff3333; }
+        .severity-badge.high { background: #ff8800; }
+        .severity-badge.medium { background: #ffcc00; color: #000; }
+        .severity-badge.low { background: #44aa44; }
+
+        .msf-badge {
+            display: inline-block;
+            background: #6633ff;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .finding-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #e0e0e0;
+        }
+
+        .finding-details {
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .detail-row {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .label {
+            color: #555;
+            min-width: 100px;
+            flex-shrink: 0;
+        }
+
+        code {
+            background: #1a1a2e;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #a0a0ff;
+        }
+
+        .no-findings {
+            text-align: center;
+            padding: 3rem;
+            color: #44aa44;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #1a1a2e;
+            color: #444;
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            body { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>{{PROJECT_NAME}}</h1>
+            <div class="subtitle">Security Audit Report &mdash; {{TIMESTAMP}}</div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number total">{{TOTAL_FINDINGS}}</div>
+                <div class="stat-label">Total Findings</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number critical">{{CRITICAL_COUNT}}</div>
+                <div class="stat-label">Critical</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number high">{{HIGH_COUNT}}</div>
+                <div class="stat-label">High</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number medium">0</div>
+                <div class="stat-label">Medium</div>
+            </div>
+        </div>
+
+        <h2>Findings</h2>
+
+        {{FINDINGS}}
+
+        <footer>
+            Generated by Security Audit Skill &mdash; Claude Code
+        </footer>
+    </div>
+</body>
+</html>
