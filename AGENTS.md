@@ -12,7 +12,13 @@ means public/blog/file.webp serves at /blog/blog/file.webp
 
 ---
 
-Every time you execute a plan always do create a worktree for it, worktrees are created at .worktrees
+Every time you execute a plan always create a worktree for it.
+**NEVER use the `EnterWorktree` tool** (it creates worktrees under `.claude/worktrees/` which is not our convention).
+Instead, use git commands directly:
+```
+git worktree add .worktrees/<feature-name> -b <feature-name>
+```
+Then edit files inside that worktree directory. To clean up: `git worktree remove .worktrees/<feature-name>`
 
 ---
 

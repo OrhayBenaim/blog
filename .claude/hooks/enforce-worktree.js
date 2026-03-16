@@ -51,12 +51,27 @@ const isExempt = EXEMPT.some((pattern) => pattern.test(p));
 if (isExempt) process.exit(0);
 
 // ── Check current branch ────────────────────────────────────────────────────
+// If the file is inside a worktree (.worktrees/), check that worktree's branch
 let branch;
 try {
-  branch = execFileSync('git', ['rev-parse', '--abbrev-ref', 'HEAD'], {
-    encoding: 'utf8',
-    timeout: 5000,
-  }).trim();
+  const worktreeMatch = p.match(/\.worktrees\/[^/]+/);
+  if (worktreeMatch) {
+    // File is inside a worktree, resolve its branch
+    const repoRoot = execFileSync('git', ['rev-parse', '--show-toplevel'], {
+      encoding: 'utf8',
+      timeout: 5000,
+    }).trim();
+    const worktreeDir = `${repoRoot}/${worktreeMatch[0]}`;
+    branch = execFileSync('git', ['-C', worktreeDir, 'rev-parse', '--abbrev-ref', 'HEAD'], {
+      encoding: 'utf8',
+      timeout: 5000,
+    }).trim();
+  } else {
+    branch = execFileSync('git', ['rev-parse', '--abbrev-ref', 'HEAD'], {
+      encoding: 'utf8',
+      timeout: 5000,
+    }).trim();
+  }
 } catch {
   // If we can't determine the branch, allow the edit
   process.exit(0);
