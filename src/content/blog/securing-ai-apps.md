@@ -118,10 +118,10 @@ What ours does:
 - Generates reports with severity ratings and remediation steps
 - Can run as a pre-commit hook to catch issues before they ship
 
-<a href="https://github.com/anthropics/claude-code/blob/main/.claude/skills/security-audit.md" target="_blank" rel="noopener noreferrer">Check out the security audit skill</a> and add it to your workflow.
+<a href="https://github.com/OrhayBenaim/blog/blob/main/.claude/skills/security-audit-skill/SKILL.md" target="_blank" rel="noopener noreferrer">Check out the security audit skill</a> and add it to your workflow.
 
 ## Ship Secure, Not Just Working
 
 The AI workflow is powerful, but it optimizes for "working," not "secure." Every suggestion it makes is trying to get your code to run. That's a useful default until it starts quietly removing the guardrails you need.
 
-The more aware you are of where AI cuts corners, the safer your apps will be. Be specific in your prompts, use battle-tested auth, lock down your RLS policies, and run a <a href="https://github.com/anthropics/claude-code/blob/main/.claude/skills/security-audit.md" target="_blank" rel="noopener noreferrer">security audit</a> before you deploy.
+The more aware you are of where AI cuts corners, the safer your apps will be. Be specific in your prompts, use battle-tested auth, lock down your RLS policies, and run a <a href="https://github.com/OrhayBenaim/blog/blob/main/.claude/skills/security-audit-skill/SKILL.md" target="_blank" rel="noopener noreferrer">security audit</a> before you deploy.
