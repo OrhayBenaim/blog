@@ -179,6 +179,7 @@ You can create short Remotion video mocks to visually demonstrate a feature to s
 - **Business-oriented only**: Focus on impact, outcomes, features delivered, metrics, and user-facing value
 - **Never show**: file structures, code snippets, technical diffs, implementation details, or terminal output
 - **Use Brand Guardian agent** to verify the video stays on-brand and matches the design system
+- **Pacing**: Animations and transitions must give the viewer enough time to read and understand each screen before moving on — don't rush through content
 
 ### How to Create
 1. **Invoke the `remotion-best-practices` skill** to load Remotion domain knowledge
