@@ -6,7 +6,11 @@ import PostCard from '../components/PostCard.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog'))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  .sort((a, b) => {
+    const dateDiff = b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+    if (dateDiff !== 0) return dateDiff;
+    return b.data.pubTime.localeCompare(a.data.pubTime);
+  });
 ---
 <BaseLayout title="Orhay's Blog" description="Technical tutorials and knowledge sharing">
   <Header slot="header" />

@@ -2,6 +2,7 @@
 title: "Running Claude on Autopilot"
 description: "Use a devcontainer to run Claude Code with --dangerously-skip-permissions safely. Full autopilot autonomy without exposing your host machine."
 pubDate: 2026-03-16
+pubTime: "15:10"
 tags: ["claude-code", "security", "devcontainers", "workflow"]
 ---
 

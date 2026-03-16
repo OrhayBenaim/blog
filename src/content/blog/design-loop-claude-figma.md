@@ -2,6 +2,7 @@
 title: "From Idea to Pixel-Perfect Code: The Design Loop with Claude and Figma"
 description: "How I use Google Stitch, Figma Make, and Claude with Figma MCP to go from rough idea to production code, with design and code evolving together in a two-way loop."
 pubDate: 2026-03-16
+pubTime: "18:20"
 tags: ["ai", "workflow", "claude-code", "figma", "design"]
 ---
 

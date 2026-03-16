@@ -2,6 +2,7 @@
 title: "Your AI-Built App Is Probably Not Secure"
 description: "AI builds things that work, but working and secure aren't the same thing. Here's where AI-generated code cuts corners on security and how to fix it."
 pubDate: 2026-03-16
+pubTime: "20:50"
 tags: ["security", "ai", "supabase", "firebase", "rls"]
 ---
 

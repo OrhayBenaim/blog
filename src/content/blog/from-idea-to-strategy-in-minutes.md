@@ -2,6 +2,7 @@
 title: "From Idea to Strategy in Minutes"
 description: "How I use AI agents to brainstorm, plan, and execute. A real walkthrough of going from a vague idea to a full TikTok strategy with generated visual content."
 pubDate: 2026-03-16
+pubTime: "10:00"
 tags: ["ai", "workflow", "claude-code", "agents"]
 ---
 
