@@ -6,9 +6,9 @@ pubTime: "18:00"
 tags: ["ai", "workflow", "claude-code", "agents", "product-management", "ai-for-product-managers"]
 ---
 
-Most people hear "Claude Code" and think it's a developer tool. Fair enough. The name has "code" in it, and the demos usually show someone generating React components or debugging Python scripts. But the thing that makes it actually powerful for a product manager isn't the code generation. It's the workflow loop: you think through what you need, hand it to a specialist agent, and get back real deliverables. That loop doesn't care if you're writing code or writing specs.
+Most people hear "Claude Code" and think it's a developer tool. Fair enough. The name has "code" in it, and the demos usually show someone generating React components or debugging Python scripts. But the thing that makes it actually powerful for a product manager isn't the code generation. It's the workflow loop. you think through what you need, hand it to a specialist agent, and get back real deliverables. That loop doesn't care if you're writing code or writing specs.
 
-I'm a product manager. My job is figuring out what to build, why it matters, and making sure the right people have the right context to go build it. That means specs, alignment artifacts, tickets. The kind of PM workflow automation that eats a full afternoon even for a small feature. So I started using Claude Code for this non-developer work, and the results were good enough that I want to walk you through the whole thing.
+Even if you're not a PM by title, you've done the work. Figuring out what to build, why it matters, making sure the right people have the right context to go build it. That means specs, alignment artifacts, tickets. The kind of work that eats a full afternoon even for a small feature. So I started using Claude Code for this non-developer work, and the results were good enough that I want to walk you through the whole thing.
 
 This post covers a real feature, start to finish. One idea, one conversation, and what came out the other side:
 
@@ -23,7 +23,7 @@ This post covers a real feature, start to finish. One idea, one conversation, an
 
 I run a blog built with Astro. Four posts, all published on the same date. The homepage sort order was random because every post shared the same timestamp. Astro parses a bare date string as midnight UTC, so the sort expression returns zero for every pair and the display order depends on filesystem glob order. Not great.
 
-The fix was simple: add a time field to each post's frontmatter so they sort in a predictable order. Not a big project. But even small features need a proper spec that an engineer can pick up, stakeholder alignment on why you're doing it, and Jira tickets to track the work. The kind of thing that eats a PM's afternoon.
+The fix was simple, add a time field to each post's frontmatter so they sort in a predictable order. Not a big project. But even small features need a proper spec that an engineer can pick up, stakeholder alignment on why you're doing it, and Jira tickets to track the work. The kind of thing that eats a PM's afternoon.
 
 ## Brainstorming with AI Agents: Figuring Out What We Need
 
@@ -84,7 +84,7 @@ The agent used the Jira Manager skill to create development tickets directly fro
 
 ## My Honest Take: What AI Does Well (and Where PMs Still Matter)
 
-What surprised me was the spec quality. The edge cases table, the backward compatibility analysis, the file-by-file change summary with clear labels for new files versus modified ones. I've written a lot of specs, and the tedious part is always the completeness. Covering the edge cases, documenting what doesn't change, making sure an engineer won't have to come back and ask "what happens when this field is missing?" The agent handled that part well.
+What surprised me was the spec quality. The edge cases table, the backward compatibility analysis, the file-by-file change summary with clear labels for new files versus modified ones. Anyone who's written specs knows the tedious part is always the completeness. Covering the edge cases, documenting what doesn't change, making sure an engineer won't have to come back and ask "what happens when this field is missing?" The agent handled that part well.
 
 What still needs a human is the brainstorming layer. That's where your judgment matters most. The questions it asks are good, but you need to bring real product context. Why this approach over that one. What trade-offs matter for your specific codebase and team. The agent executes well with clear direction, but that direction has to come from someone who understands the product. The brainstorming conversation is short, but it's the part that actually determines whether the output is useful.
 
@@ -116,4 +116,4 @@ The original comes from <a href="https://github.com/msitarzewski/agency-agents" 
 
 The brainstorming layer handles the orchestration. You bring the product context, it figures out which tools to use and in what order.
 
-Claude Code isn't just for developers. If you're a product manager who spends too much time on specs, tickets, and alignment artifacts, this workflow gives you that time back. The thinking is still yours. The execution doesn't have to be.
+Claude Code isn't just for developers. If you spend too much time on specs, tickets, and alignment artifacts, this workflow gives you that time back. The thinking is still yours. The execution doesn't have to be.
