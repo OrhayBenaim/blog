@@ -19,15 +19,15 @@ When you pass `--dangerously-skip-permissions`, Claude can execute any shell com
 
 ## The Devcontainer: A Sandbox Built for Claude Code
 
-A devcontainer is a Docker container configured to be your full development environment. You code inside it. Your tools, extensions, and runtimes all live there. And Anthropic provides a [reference devcontainer](https://github.com/anthropics/claude-code/tree/main/.devcontainer) built specifically for Claude Code. You don't have to figure this out yourself.
+A devcontainer is a Docker container configured to be your full development environment. You code inside it. Your tools, extensions, and runtimes all live there. And Anthropic provides a <a href="https://github.com/anthropics/claude-code/tree/main/.devcontainer" target="_blank" rel="noopener noreferrer">reference devcontainer</a> built specifically for Claude Code. You don't have to figure this out yourself.
 
 ## Setting Up Claude Code in a Devcontainer
 
 Getting Claude Code running inside a devcontainer works with VS Code, JetBrains, the CLI (`devcontainer up`), and GitHub Codespaces. Basically anything that supports the devcontainer spec. Four steps.
 
-**1. Install devcontainer tooling** for your editor or CLI. For VS Code, install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
+**1. Install devcontainer tooling** for your editor or CLI. For VS Code, install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers" target="_blank" rel="noopener noreferrer">Dev Containers extension</a>.
 
-**2. Clone [Anthropic's reference configs](https://github.com/anthropics/claude-code/tree/main/.devcontainer)** into your project's `.devcontainer/` directory. There are three files that matter.
+**2. Clone <a href="https://github.com/anthropics/claude-code/tree/main/.devcontainer" target="_blank" rel="noopener noreferrer">Anthropic's reference configs</a>** into your project's `.devcontainer/` directory. There are three files that matter.
 
 **3. Open your project.**
 
@@ -115,4 +115,4 @@ I've been running this setup for my own projects and it's the best of both world
 
 ## Get Started
 
-Grab the reference configs from [Anthropic's repo](https://github.com/anthropics/claude-code/tree/main/.devcontainer), drop them in your project, and reopen in a container. The [official docs](https://docs.anthropic.com/en/docs/claude-code) cover the details if you want to customize further.
+Grab the reference configs from <a href="https://github.com/anthropics/claude-code/tree/main/.devcontainer" target="_blank" rel="noopener noreferrer">Anthropic's repo</a>, drop them in your project, and reopen in a container. The <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank" rel="noopener noreferrer">official docs</a> cover the details if you want to customize further.

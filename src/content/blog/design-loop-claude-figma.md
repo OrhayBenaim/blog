@@ -49,7 +49,7 @@ This is where it gets interesting. This is the part that changes everything abou
 
 ### Reading the Design
 
-Claude connects to Figma through the [Figma MCP](https://github.com/figma/mcp-server-guide) (Model Context Protocol) server. It's not looking at a screenshot and guessing. It reads the actual design file: the layout structure, component hierarchy, spacing values, color tokens, typography specs. Everything that matters for faithful implementation is right there in the Figma MCP data.
+Claude connects to Figma through the <a href="https://github.com/figma/mcp-server-guide" target="_blank" rel="noopener noreferrer">Figma MCP</a> (Model Context Protocol) server. It's not looking at a screenshot and guessing. It reads the actual design file: the layout structure, component hierarchy, spacing values, color tokens, typography specs. Everything that matters for faithful implementation is right there in the Figma MCP data.
 
 The first thing I do is point Claude at the Figma file and ask it to implement the design. Because it's reading the real structure (not just pixels), the output is remarkably close to the original. Colors match. Spacing matches. The component hierarchy makes sense. It's not a pixel-perfect clone, but it's close enough that the refinement stage is about polish rather than reconstruction.
 

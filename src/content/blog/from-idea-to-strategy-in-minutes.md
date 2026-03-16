@@ -23,9 +23,9 @@ The workflow has two distinct layers, and understanding the split is what makes 
 claude plugin add superpowers
 ```
 
-You can find it here: [Superpowers on Claude Code Marketplace](https://marketplace.claudecode.dev/plugins/superpowers)
+You can find it here: <a href="https://marketplace.claudecode.dev/plugins/superpowers" target="_blank" rel="noopener noreferrer">Superpowers on Claude Code Marketplace</a>
 
-**Layer 2: Specialist.** Once your idea is clear, the brainstorming layer hands it off to a specialist agent. In this case, a [TikTok Strategist](https://github.com/msitarzewski/agency-agents/blob/main/marketing/marketing-tiktok-strategist.md) from the [Agency Agents](https://github.com/msitarzewski/agency-agents) collection. These agents are built with deep knowledge of their specific domain. They don't ask you 20 questions. They take a clear brief and produce real, actionable output.
+**Layer 2: Specialist.** Once your idea is clear, the brainstorming layer hands it off to a specialist agent. In this case, a <a href="https://github.com/msitarzewski/agency-agents/blob/main/marketing/marketing-tiktok-strategist.md" target="_blank" rel="noopener noreferrer">TikTok Strategist</a> from the <a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener noreferrer">Agency Agents</a> collection. These agents are built with deep knowledge of their specific domain. They don't ask you 20 questions. They take a clear brief and produce real, actionable output.
 
 The brainstorming layer is the bridge between "I have a vague idea" and "here's a tight brief that a specialist can run with."
 
@@ -169,14 +169,14 @@ If you want to try this workflow yourself, here's what you need:
 claude plugin add superpowers
 ```
 
-[Superpowers on Claude Code Marketplace](https://marketplace.claudecode.dev/plugins/superpowers)
+<a href="https://marketplace.claudecode.dev/plugins/superpowers" target="_blank" rel="noopener noreferrer">Superpowers on Claude Code Marketplace</a>
 
 **TikTok Strategist** (the strategy specialist used in this post):
 
-[TikTok Strategist on GitHub](https://github.com/msitarzewski/agency-agents/blob/main/marketing/marketing-tiktok-strategist.md) part of the [Agency Agents](https://github.com/msitarzewski/agency-agents) collection, which includes specialists for SEO, content creation, brand strategy, and more.
+<a href="https://github.com/msitarzewski/agency-agents/blob/main/marketing/marketing-tiktok-strategist.md" target="_blank" rel="noopener noreferrer">TikTok Strategist on GitHub</a> part of the <a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener noreferrer">Agency Agents</a> collection, which includes specialists for SEO, content creation, brand strategy, and more.
 
 **NanoBanana** (the visual content generator used in this post):
 
-[NanoBanana skill on GitHub](https://github.com/OrhayBenaim/blog/tree/main/.claude/skills/nanobanana) a Claude Code skill that uses Google Gemini to generate images and video from text prompts. You can grab the skill files and drop them into your own `.claude/skills/nanobanana/` directory. The brainstorming layer brought it in automatically for the visual identity work.
+<a href="https://github.com/OrhayBenaim/blog/tree/main/.claude/skills/nanobanana" target="_blank" rel="noopener noreferrer">NanoBanana skill on GitHub</a> a Claude Code skill that uses Google Gemini to generate images and video from text prompts. You can grab the skill files and drop them into your own `.claude/skills/nanobanana/` directory. The brainstorming layer brought it in automatically for the visual identity work.
 
 The brainstorming layer will guide you through the rest. It knows which tools are available, picks the right ones for your project, builds a plan, and executes it when you're ready.
