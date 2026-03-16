@@ -182,16 +182,23 @@ You can create short Remotion video mocks to visually demonstrate a feature to s
 - **Pacing**: Animations and transitions must give the viewer enough time to read and understand each screen before moving on — don't rush through content
 
 ### How to Create
-1. **Invoke the `remotion-best-practices` skill** to load Remotion domain knowledge
-2. **Use Brand Guardian** to get the brand guidelines and ensure visual consistency
-3. **Scaffold a Remotion composition** that demonstrates the feature concept:
+1. **Invoke the `prompt-engineering` skill** to refine the user's raw request into a detailed video brief:
+   - Transform vague feature descriptions into a structured scene-by-scene breakdown
+   - Define exact animation pacing: entry timing, hold duration per screen, exit transitions
+   - Specify visual hierarchy: what the viewer should notice first, second, third on each scene
+   - Clarify messaging flow: opening hook → problem → solution → impact → call to action
+   - Add concrete details the user likely meant but didn't say (e.g., "show the dashboard" → specify which metrics, what state, what transitions between views)
+   - The refined brief becomes the single source of truth for the Remotion composition — do not deviate from it
+2. **Invoke the `remotion-best-practices` skill** to load Remotion domain knowledge
+3. **Use Brand Guardian** to get the brand guidelines and ensure visual consistency
+4. **Scaffold a Remotion composition** using the refined brief from step 1:
    - Use `<Sequence>` and transitions to walk through the user flow
    - Add text animations to label each step/screen
    - Use placeholder assets (images, rectangles) for UI elements
    - Keep it short (10-30 seconds) — this is a concept, not a polished video
    - Content must be business/stakeholder language — no technical jargon
-4. **Make it parametrizable** with a Zod schema so stakeholders can tweak messaging or flow order
-5. **Render/export the video automatically** and present the output for user review — never ask the user to run commands
+5. **Make it parametrizable** with a Zod schema so stakeholders can tweak messaging or flow order
+6. **Render/export the video automatically** and present the output for user review — never ask the user to run commands
 
 ### Critical: Autonomous Rendering
 - Always render the video yourself using Remotion CLI (`npx remotion render`)
