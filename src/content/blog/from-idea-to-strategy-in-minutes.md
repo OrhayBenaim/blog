@@ -173,14 +173,10 @@ claude plugin add superpowers
 
 **TikTok Strategist** (the strategy specialist used in this post):
 
-[TikTok Strategist on GitHub](https://github.com/msitarzewski/agency-agents/blob/main/marketing/marketing-tiktok-strategist.md) — part of the [Agency Agents](https://github.com/msitarzewski/agency-agents) collection, which includes specialists for SEO, content creation, brand strategy, and more.
+[TikTok Strategist on GitHub](https://github.com/msitarzewski/agency-agents/blob/main/marketing/marketing-tiktok-strategist.md) part of the [Agency Agents](https://github.com/msitarzewski/agency-agents) collection, which includes specialists for SEO, content creation, brand strategy, and more.
 
 **NanoBanana** (the visual content generator used in this post):
 
-```bash
-claude skill add nanobanana
-```
-
-NanoBanana uses Google Gemini to generate images and video from text prompts. The brainstorming layer brought it in automatically for the visual identity work.
+[NanoBanana skill on GitHub](https://github.com/OrhayBenaim/blog/tree/main/.claude/skills/nanobanana) a Claude Code skill that uses Google Gemini to generate images and video from text prompts. You can grab the skill files and drop them into your own `.claude/skills/nanobanana/` directory. The brainstorming layer brought it in automatically for the visual identity work.
 
 The brainstorming layer will guide you through the rest. It knows which tools are available, picks the right ones for your project, builds a plan, and executes it when you're ready.
