@@ -1,26 +1,31 @@
 ---
-title: "How a Product Manager Ships with Claude Code"
-description: "From a vague idea to a full spec, stakeholder video, and Jira tickets. A real walkthrough of PM workflows powered by AI agents."
+title: "How a Product Manager Ships with Claude Code (No Coding Required)"
+description: "A product manager's real walkthrough: from a vague idea to a full spec, stakeholder video, and Jira tickets using Claude Code AI agents. No code written."
 pubDate: 2026-03-16
 pubTime: "18:00"
-tags: ["ai", "workflow", "claude-code", "agents", "product-management"]
+tags: ["ai", "workflow", "claude-code", "agents", "product-management", "ai-for-product-managers"]
 ---
 
-Most people hear "Claude Code" and think it's a developer tool. Fair enough. The name has "code" in it, and the demos usually show someone generating React components or debugging Python scripts. But the thing that makes it actually powerful isn't the code generation. It's the workflow loop: you think through what you need, hand it to a specialist agent, and get back real deliverables. That loop doesn't care if you're writing code or writing specs.
+Most people hear "Claude Code" and think it's a developer tool. Fair enough. The name has "code" in it, and the demos usually show someone generating React components or debugging Python scripts. But the thing that makes it actually powerful for a product manager isn't the code generation. It's the workflow loop: you think through what you need, hand it to a specialist agent, and get back real deliverables. That loop doesn't care if you're writing code or writing specs.
 
-I'm a product manager. My job is figuring out what to build, why it matters, and making sure the right people have the right context to go build it. That means specs, alignment artifacts, tickets. The kind of work that takes a full afternoon even for a small feature. So I started using this workflow for PM work, and the results were good enough that I want to walk you through the whole thing.
+I'm a product manager. My job is figuring out what to build, why it matters, and making sure the right people have the right context to go build it. That means specs, alignment artifacts, tickets. The kind of PM workflow automation that eats a full afternoon even for a small feature. So I started using Claude Code for this non-developer work, and the results were good enough that I want to walk you through the whole thing.
 
-This post covers a real feature, start to finish. One idea, one conversation, and what came out the other side.
+This post covers a real feature, start to finish. One idea, one conversation, and what came out the other side:
 
-![A product manager's workspace with a spec, video, and Jira board flowing from a laptop](/blog/blog/pm-ships-hero.webp)
+- A full feature spec with edge cases and acceptance criteria
+- A stakeholder video generated automatically
+- Jira tickets created directly from the spec
+- Zero code written by me
 
-## The Idea
+![Product manager using Claude Code to generate a feature spec, stakeholder video, and Jira tickets from a single conversation](/blog/blog/pm-ships-hero.webp)
+
+## The Idea: A Small Feature That Still Needs PM Work
 
 I run a blog built with Astro. Four posts, all published on the same date. The homepage sort order was random because every post shared the same timestamp. Astro parses a bare date string as midnight UTC, so the sort expression returns zero for every pair and the display order depends on filesystem glob order. Not great.
 
 The fix was simple: add a time field to each post's frontmatter so they sort in a predictable order. Not a big project. But even small features need a proper spec that an engineer can pick up, stakeholder alignment on why you're doing it, and Jira tickets to track the work. The kind of thing that eats a PM's afternoon.
 
-## Brainstorming: Figuring Out What We Need
+## Brainstorming with AI Agents: Figuring Out What We Need
 
 I started with the Superpowers plugin for Claude Code. If you've read the previous post in this series, you know how it works. It doesn't try to produce a solution right away. It asks clarifying questions one at a time, helps you think through the problem, and then builds a plan using whatever specialist agents are available.
 
@@ -48,9 +53,9 @@ Once the brainstorming layer had enough context, it produced an execution plan:
 
 That single sentence is where I stopped thinking and the agent started doing. Everything from here forward happened without further input. The brainstorming layer dispatched the Senior PM agent, which handled the rest autonomously.
 
-## What Came Back
+## What the AI Agents Delivered
 
-### The Spec
+### The Feature Spec
 
 The Senior PM agent produced a full feature spec. Not a rough outline or a bullet list of ideas. A real document with context on why the change is needed, the technical approach, development tasks broken down by file, acceptance criteria for each task, and an edge cases table. The kind of spec an engineer could pick up and start building from without a single follow-up question.
 
@@ -75,15 +80,15 @@ The agent used Remotion to generate a short video explaining the feature and why
 
 The agent used the Jira Manager skill to create development tickets directly from the spec. Each task became a ticket with the right description, acceptance criteria, and priority. No copy-pasting between tools, no reformatting spec sections into ticket descriptions, no manually setting fields. The spec was the source of truth and the tickets came straight from it.
 
-![Jira tickets created from the spec](/blog/blog/pm-ships-jira-tickets.webp)
+![Jira board showing development tickets automatically created from the AI-generated feature spec](/blog/blog/pm-ships-jira-tickets.webp)
 
-## My Honest Take
+## My Honest Take: What AI Does Well (and Where PMs Still Matter)
 
 What surprised me was the spec quality. The edge cases table, the backward compatibility analysis, the file-by-file change summary with clear labels for new files versus modified ones. I've written a lot of specs, and the tedious part is always the completeness. Covering the edge cases, documenting what doesn't change, making sure an engineer won't have to come back and ask "what happens when this field is missing?" The agent handled that part well.
 
 What still needs a human is the brainstorming layer. That's where your judgment matters most. The questions it asks are good, but you need to bring real product context. Why this approach over that one. What trade-offs matter for your specific codebase and team. The agent executes well with clear direction, but that direction has to come from someone who understands the product. The brainstorming conversation is short, but it's the part that actually determines whether the output is useful.
 
-## Get Started
+## Get Started: Set Up Claude Code for PM Workflows
 
 If you want to try this workflow yourself, here's what you need:
 
@@ -110,3 +115,5 @@ The original comes from <a href="https://github.com/msitarzewski/agency-agents" 
 <a href="https://github.com/OrhayBenaim/blog/tree/main/.claude/skills/jira-manager" target="_blank" rel="noopener noreferrer">Jira Manager on GitHub</a>
 
 The brainstorming layer handles the orchestration. You bring the product context, it figures out which tools to use and in what order.
+
+Claude Code isn't just for developers. If you're a product manager who spends too much time on specs, tickets, and alignment artifacts, this workflow gives you that time back. The thinking is still yours. The execution doesn't have to be.
