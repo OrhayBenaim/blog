@@ -80,7 +80,7 @@ The agent used <a href="https://www.remotion.dev/" target="_blank" rel="noopener
 
 ### The Jira Tickets
 
-The agent used the Jira Manager skill to create development tickets directly from the spec. Each task became a ticket with the right description, acceptance criteria, and priority. No copy-pasting between tools, no reformatting spec sections into ticket descriptions, no manually setting fields. The spec was the source of truth and the tickets came straight from it.
+The agent used the <a href="https://github.com/OrhayBenaim/blog/tree/main/.claude/skills/jira-manager" target="_blank" rel="noopener noreferrer">Jira Manager skill</a> to create development tickets directly from the spec. Each task became a ticket with the right description, acceptance criteria, and priority. No copy-pasting between tools, no reformatting spec sections into ticket descriptions, no manually setting fields. The spec was the source of truth and the tickets came straight from it.
 
 ![Jira board showing development tickets automatically created from the AI-generated feature spec](/blog/blog/pm-ships-jira-tickets.webp)
 
@@ -88,7 +88,7 @@ The agent used the Jira Manager skill to create development tickets directly fro
 
 What surprised me was the spec quality. The edge cases table, the backward compatibility analysis, the file-by-file change summary with clear labels for new files versus modified ones. Anyone who's written specs knows the tedious part is always the completeness. Covering the edge cases, documenting what doesn't change, making sure an engineer won't have to come back and ask "what happens when this field is missing?" The agent handled that part well.
 
-What still needs a human is the brainstorming layer. That's where your judgment matters most. The questions it asks are good, but you need to bring real product context. Why this approach over that one. What trade-offs matter for your specific codebase and team. The agent executes well with clear direction, but that direction has to come from someone who understands the product. The brainstorming conversation is short, but it's the part that actually determines whether the output is useful.
+What still needs a human is the brainstorming layer. That's where your judgment matters most. The questions it asks are good, but you need to bring real product context. Why this approach over that one. What trade-offs matter for your specific product and team. The agent executes well with clear direction, but that direction has to come from someone who understands the product. The brainstorming conversation is short, but it's the part that actually determines whether the output is useful.
 
 ## Get Started: Set Up Claude Code for PM Workflows
 
