@@ -99,7 +99,7 @@ These two concepts explain why most of these issues happen in the first place.
 Your prompts matter here. Be explicit about security requirements:
 
 - Bad: "user need to be able to see their data in the dashboard."
-- Good: "user need to be able to see their data in the dashboard, we need to setup the correct rls using user id."
+- Good: "user need to be able to see their data in the dashboard, we need to setup the correct rls using userId and checks for columns that shouldnt be updated."
 
 The more specific you are about security constraints, the less room AI has to cut corners.
 

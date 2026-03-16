@@ -1,6 +1,18 @@
+Every time we write a plan that envolve: 
+ - content creation (text) we need to make sure Content Creator agent will write the content.
+ - images , videos we need to make sure Image Prompt Engineer agent is generating a prompt for the image or video and use nanobanana skill to generate it
+ - images , videos that are social media vibe 9:16 we use TikTok Strategist agent with Image Prompt Engineer agent to create the images, videos
+
+For every blog post we need to check with SEO Specialist agent that the content is seo approved.
+
+---
+
+Images are saved to public/blog/ , in markdown the link will be /blog/blog/
+means public/blog/file.webp serves at /blog/blog/file.webp
+
+---
 
 Every time you execute a plan always do create a worktree for it, worktrees are created at .worktrees
-
 
 ---
 
