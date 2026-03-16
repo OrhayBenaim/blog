@@ -27,7 +27,7 @@ The fix was simple, add a time field to each post's frontmatter so they sort in 
 
 ## Brainstorming with AI Agents: Figuring Out What We Need
 
-I started with the Superpowers plugin for Claude Code. If you've read the previous post in this series, you know how it works. It doesn't try to produce a solution right away. It asks clarifying questions one at a time, helps you think through the problem, and then builds a plan using whatever specialist agents are available.
+I started with the Superpowers plugin for Claude Code. If you've read [the previous post in this series](/blog/from-idea-to-strategy-in-minutes), you know how it works. It doesn't try to produce a solution right away. It asks clarifying questions one at a time, helps you think through the problem, and then builds a plan using whatever specialist agents are available.
 
 I described the problem and it started digging into the details:
 
