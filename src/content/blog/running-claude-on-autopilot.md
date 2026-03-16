@@ -25,9 +25,9 @@ A devcontainer is a Docker container configured to be your full development envi
 
 Getting Claude Code running inside a devcontainer works with VS Code, JetBrains, the CLI (`devcontainer up`), and GitHub Codespaces. Basically anything that supports the devcontainer spec. Four steps.
 
-**1. Install devcontainer tooling** for your editor or CLI.
+**1. Install devcontainer tooling** for your editor or CLI. For VS Code, install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers).
 
-**2. Clone Anthropic's reference configs** into your project's `.devcontainer/` directory. There are three files that matter.
+**2. Clone [Anthropic's reference configs](https://github.com/anthropics/claude-code/tree/main/.devcontainer)** into your project's `.devcontainer/` directory. There are three files that matter.
 
 **3. Open your project.**
 
