@@ -89,7 +89,18 @@
       "Bash(python:*)",
       "Bash(PYTHONIOENCODING=utf-8 python C:/Users/Orhay/.claude/skills/skill-creator/scripts/init_skill.py agent-browser --path C:/Users/Orhay/.claude/skills)",
       "Bash(PYTHONUTF8=1 PYTHONIOENCODING=utf-8 python C:/Users/Orhay/.claude/skills/skill-creator/scripts/init_skill.py agent-browser --path C:/Users/Orhay/.claude/skills)",
-      "Bash(PYTHONUTF8=1 PYTHONIOENCODING=utf-8 python C:/Users/Orhay/.claude/skills/skill-creator/scripts/package_skill.py C:/Users/Orhay/.claude/skills/agent-browser)"
+      "Bash(PYTHONUTF8=1 PYTHONIOENCODING=utf-8 python C:/Users/Orhay/.claude/skills/skill-creator/scripts/package_skill.py C:/Users/Orhay/.claude/skills/agent-browser)",
+      "Bash(git branch:*)",
+      "Bash(taskkill:*)",
+      "Bash(netstat:*)",
+      "Bash(handle.exe \"C:\\\\Users\\\\Orhay\\\\git\\\\blog\\\\.worktrees\\\\first-blog-post\" 2>/dev/null || powershell -Command \"Get-Process | Where-Object { \\\\$_.Path -like '*first-blog-post*' } | Select-Object Id, ProcessName, Path\" 2>/dev/null || echo \"Cannot determine locking process\")",
+      "Bash(powershell -Command \"Get-Process | Where-Object { \\\\$_.Path -like '*first-blog-post*' } | Select-Object Id, ProcessName\")",
+      "Bash(powershell -Command \"Remove-Item -Recurse -Force 'C:\\\\Users\\\\Orhay\\\\git\\\\blog\\\\.worktrees\\\\first-blog-post'\" && git worktree prune && echo \"Cleaned up\")",
+      "Read(//c/Users/Orhay/git/blog-worktrees/**)",
+      "Read(//c/Users/Orhay/git/**)",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Orhay/.claude/skills/skill-creator/scripts/init_skill.py\" image-optimizer --path \"C:/Users/Orhay/.claude/skills\")",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Orhay/.claude/skills/skill-creator/scripts/package_skill.py\" \"C:/Users/Orhay/.claude/skills/image-optimizer\" 2>&1 | head -30)",
+      "Bash(node:*)"
     ]
   }
 }

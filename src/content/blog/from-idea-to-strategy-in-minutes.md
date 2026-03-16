@@ -11,7 +11,7 @@ This is the first post in a series where I walk through real examples of this tw
 
 The whole thing took minutes. Here's how it works.
 
-![A lightbulb with ideas flowing into a polished strategy document](/blog/blog/from-idea-to-strategy-hero.png)
+![A lightbulb with ideas flowing into a polished strategy document](/blog/blog/from-idea-to-strategy-hero.webp)
 
 ## The Setup: Two Layers
 
@@ -29,7 +29,7 @@ You can find it here: [Superpowers on Claude Code Marketplace](https://marketpla
 
 The brainstorming layer is the bridge between "I have a vague idea" and "here's a tight brief that a specialist can run with."
 
-![Brainstorming scene flowing into a specialist workspace](/blog/blog/two-layers-concept.png)
+![Brainstorming scene flowing into a specialist workspace](/blog/blog/two-layers-concept.webp)
 
 ## The Walkthrough
 
