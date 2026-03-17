@@ -136,7 +136,8 @@
       "Bash(git:*)",
       "Bash(powershell -Command \"Remove-Item -Recurse -Force 'C:\\\\Users\\\\Orhay\\\\git\\\\blog\\\\.claude\\\\worktrees\\\\add-time-field-for-sorting'\" && git worktree prune && git branch -D worktree-add-time-field-for-sorting)",
       "Bash(rm -f claude-code-config-guide-hero.webp claude-code-config-guide-hero-v2.webp claude-code-config-guide-hero-v2.png claude-code-config-guide-hero-v3.png)",
-      "Bash(mv claude-code-config-guide-hero-v3.webp claude-code-config-guide-hero.webp)"
+      "Bash(mv claude-code-config-guide-hero-v3.webp claude-code-config-guide-hero.webp)",
+      "Bash(C:/Users/Orhay/git/blog/.worktrees/sidebar-design/.env.example:*)"
     ]
   }
 }
