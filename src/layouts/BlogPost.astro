@@ -3,6 +3,12 @@ import BaseLayout from './BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
 interface Props {
   title: string;
   description: string;
@@ -10,9 +16,11 @@ interface Props {
   updatedDate?: Date;
   tags: string[];
   minutesRead?: string;
+  headings?: Heading[];
 }
 
-const { title, description, pubDate, updatedDate, tags, minutesRead } = Astro.props;
+const { title, description, pubDate, updatedDate, tags, minutesRead, headings = [] } = Astro.props;
+const tocHeadings = headings.filter(h => h.depth === 2);
 
 function formatDate(date: Date): string {
   return date.toLocaleDateString('en-US', {
@@ -42,6 +50,15 @@ function formatDate(date: Date): string {
         </div>
       )}
     </header>
+    {tocHeadings.length > 2 && (
+      <nav class="toc">
+        <ul>
+          {tocHeadings.map(h => (
+            <li><a href={`#${h.slug}`}>{h.text}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
     <div class="post-content">
       <slot />
     </div>
@@ -105,6 +122,37 @@ function formatDate(date: Date): string {
     color: var(--text);
   }
 
+  .toc {
+    margin-bottom: 2rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-glass-dark);
+    border: var(--glass-border);
+    border-radius: 12px;
+  }
+
+  .toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+  }
+
+  .toc li {
+    margin: 0;
+  }
+
+  .toc a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    transition: color var(--transition-fast);
+  }
+
+  .toc a:hover {
+    color: var(--accent);
+  }
+
   .post-content {
     font-size: 1.05rem;
   }
@@ -126,10 +174,46 @@ function formatDate(date: Date): string {
     border-radius: 12px;
   }
 
+  .post-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .post-content :global(th),
+  .post-content :global(td) {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid rgba(42, 157, 143, 0.3);
+    text-align: left;
+  }
+
+  .post-content :global(th) {
+    background: rgba(42, 157, 143, 0.1);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+  }
+
+  .post-content :global(tr:hover) {
+    background: rgba(42, 157, 143, 0.05);
+  }
+
   @media (max-width: 640px) {
     .glass-article {
       padding: 1.5rem;
       border-radius: 12px;
+    }
+
+    .post-content :global(table) {
+      font-size: 0.85rem;
+    }
+
+    .post-content :global(th),
+    .post-content :global(td) {
+      padding: 0.4rem 0.5rem;
     }
   }
 </style>
