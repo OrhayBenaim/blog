@@ -10,7 +10,7 @@ NVIDIA just shipped <a href="https://www.nvidia.com/en-us/ai/nemoclaw/" target="
 
 If you've been running OpenClaw agents on your machine, you already know the problem. These agents have broad system access. They can read files, make network requests, execute commands. That's what makes them useful, but it's also what makes them risky. NemoClaw is NVIDIA's answer to that gap.
 
-![NemoClaw architecture showing security layers wrapping an OpenClaw AI agent sandbox](/blog/blog/nvidia-nemoclaw-hero.webp)
+![Jensen Huang cartoon character with crab claws, the NemoClaw mascot](/blog/blog/nvidia-nemoclaw-hero.webp)
 
 ## What is OpenClaw (and Why AI Agent Security Matters)
 
@@ -107,16 +107,6 @@ Here are the scenarios where NemoClaw actually makes sense right now.
 **Team deployments with controlled egress.** For teams running shared agents, the network policy system gives you a way to define exactly which external services the agent can reach. New destinations get surfaced for approval. No silent data exfiltration.
 
 **Telegram-bridged assistants.** OpenClaw already supports Telegram integration. With NemoClaw, you can expose an agent over Telegram while keeping it sandboxed. Remote access to a secured agent, not an open pipe to your machine.
-
-A practical setup for a sandboxed coding agent looks like this:
-
-```bash
-curl -fsSL https://nvidia.com/nemoclaw.sh | bash
-nemoclaw onboard  # name it, set your API key, pick a model
-nemoclaw my-agent connect  # start working
-```
-
-Three commands. That's it. The security policies apply automatically from the blueprint.
 
 ## NemoClaw vs OpenClaw
 
