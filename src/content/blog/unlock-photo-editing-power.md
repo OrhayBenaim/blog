@@ -116,70 +116,66 @@ Same room. Same furniture. Same composition. Same camera angle. Only the lightin
 
 ## Four JSON Extraction Prompts for Any Photo
 
-Lighting is just one dimension. There are four specialized extraction prompts, each designed to break down a different aspect of any photo into structured, editable JSON.
+Lighting is just one dimension. There are four specialized extraction prompts, each designed to break down a different aspect of any photo into structured, editable JSON. You've already seen the lighting one in action. Here are all four.
 
-**Lighting & Time of Day** captures every light source in the scene with its direction, color temperature, and intensity. It maps shadow behavior, estimates the time of day, and reads the overall mood. You've already seen this one in action above.
+**Lighting & Time of Day**
 
-**Logos & Text** finds every visible text string and brand mark in the image. It pulls font styles, colors, exact placement, and the surface each element sits on. Useful when you want to swap branding or change copy on a product shot.
+```
+You are a lighting analysis specialist for photography. Analyze the provided photo and extract all lighting information as structured JSON.
 
-```json
-{
-  "text_elements": [
-    {
-      "text_string": "COLD BREW COFFEE",
-      "font_style": "Sans-serif, geometric, all uppercase",
-      "text_color": "Off-white (#F2F0E8)",
-      "placement": "Upper-center of the product label"
-    }
-  ],
-  "logos": [
-    {
-      "brand_name": "Stumptown Coffee Roasters",
-      "logo_type": "Combination mark with illustration above wordmark",
-      "placement": "Center of the bottle label"
-    }
-  ]
-}
+Examine every visible and inferred light source in the image. For each light source, describe its type (natural sunlight, overcast sky, tungsten lamp, fluorescent panel, neon sign, candle, etc.), the direction it comes from relative to the camera, its approximate color temperature as a descriptive label and Kelvin estimate, and its intensity relative to other sources in the scene.
+
+Describe the shadows in the image: their direction, how soft or hard their edges are, their approximate length relative to the objects casting them, and their color tint.
+
+Estimate the time of day based on light angle, color, and shadow behavior. Describe weather or atmospheric conditions that affect the light (overcast, haze, fog, clear sky, rain, dust particles catching light, etc.).
+
+Assess the ratio of ambient fill light to direct key light. Finally, describe the overall mood the lighting creates in one concise phrase.
+
+All values must be descriptive strings. Use hex color codes where colors are mentioned. Do not use numerical scores or ratings.
 ```
 
-**Camera Perspective** breaks down the virtual camera setup. Focal length, lens type, camera height, depth of field, vanishing points, and any distortion. When you need to match a photo's perspective for compositing or recreate a specific cinematic look, this is what you reach for.
+**Logos & Text**
 
-```json
-{
-  "focal_length_estimate": "Approximately 35mm equivalent",
-  "lens_type": "Wide-angle",
-  "perspective_type": "Low-angle eye-level",
-  "depth_of_field": {
-    "sharpest_zone": "Subject's face and upper body",
-    "estimated_aperture": "Around f/4 to f/5.6"
-  },
-  "vanishing_points": {
-    "type": "Two-point perspective",
-    "horizon_line": "At approximately 40% from the top of the frame"
-  }
-}
+```
+You are a visual text and brand mark identification specialist. Analyze the provided photo and extract every piece of visible text and every logo or brand mark as structured JSON.
+
+For text elements: read every string of text visible in the image, no matter how small. Describe the font style (serif, sans-serif, script, monospace, decorative, handwritten), the approximate weight (thin, light, regular, medium, bold, extra-bold), an estimated size relative to the image frame (small caption, medium body, large heading, dominant display), the text color as a hex code, where the text sits in the image (top-left, center, on the product label, on a wall sign, etc.), what surface or material the text appears on, and how readable it is given its contrast with the background.
+
+For logos and brand marks: describe the visual design of the logo (icon shape, symbol, lettermark, combination mark), identify the brand if recognizable, note its colors with hex codes, describe its placement and the surface it appears on, and estimate its size relative to the image frame.
+
+All values must be descriptive strings. Use hex color codes for all colors. Do not use numerical scores or ratings.
 ```
 
-**Objects for Compositing** catalogs every object in the scene with its bounding area, edge complexity, occlusion context, and shadow information. It even includes compositing tips for each object. This one is gold when you need to isolate, move, or replace specific elements.
+**Camera Perspective**
 
-```json
-{
-  "objects": [
-    {
-      "name": "Ceramic Coffee Mug",
-      "bounding_area": {
-        "left_edge": "62% from left",
-        "approximate_width": "12% of frame width"
-      },
-      "edge_complexity": "Smooth and geometric, straightforward to mask",
-      "shadow": {
-        "direction": "Falls to the right",
-        "softness": "Soft-edged contact shadow"
-      },
-      "compositing_notes": "Match the contact shadow in the target scene. Steam wisps should use Screen blending mode."
-    }
-  ]
-}
+```
+You are a camera and lens analysis specialist for photography. Analyze the provided photo and extract all information about the camera perspective, lens characteristics, and spatial geometry as structured JSON.
+
+Estimate the focal length by examining field of view, subject distortion, and background compression. Determine the camera height relative to the primary subject (below, at, or above subject level). Identify the lens type category (ultra-wide, wide, normal, short telephoto, telephoto, super-telephoto). Describe any visible lens distortion (barrel, pincushion, rectilinear, or none apparent).
+
+Identify vanishing points: how many are visible or implied, where they sit in the frame, and whether the perspective is one-point, two-point, or three-point.
+
+Estimate the depth of field by examining which areas are sharp and which are blurred. Describe the approximate shooting distance from camera to primary subject.
+
+Classify the perspective type (eye-level, low-angle, high-angle, bird's-eye, worm's-eye, Dutch angle, overhead flat-lay, etc.) and note any tilt or pan of the camera.
+
+All values must be descriptive strings. Do not use numerical scores or ratings.
+```
+
+**Objects for Compositing**
+
+```
+You are a compositing preparation specialist. Analyze the provided photo and extract detailed information about each distinct object that a photo editor might want to isolate, mask, and composite into another scene.
+
+For each object, describe what it is and note its bounding area as approximate percentage positions within the frame (left edge, top edge, width, height). Describe the complexity of its edges: are they smooth and geometric (easy to mask), irregular and organic (moderate masking effort), or fuzzy, translucent, or wispy (requiring advanced masking techniques like channel pulling or hair refinement).
+
+Describe what is directly behind and around the object (occlusion context) so an editor knows what would need to be reconstructed if the object is removed. Note any shadow the object casts: its direction, softness, color, and which surface it falls on. Describe any reflections the object creates on nearby surfaces.
+
+Identify what surface the object sits on or is attached to. Provide a scale reference by comparing the object's size to other known objects in the scene or estimating its real-world dimensions.
+
+Finally, include practical compositing notes: tips for cleanly extracting this object, potential challenges, and suggestions for maintaining realism when placing it into a new scene.
+
+All values must be descriptive strings. Use hex color codes where colors are mentioned. Do not use numerical scores or ratings.
 ```
 
 ## Why Structured Prompts Beat Natural Language for Photo Editing
