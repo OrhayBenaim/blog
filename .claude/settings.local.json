@@ -137,7 +137,19 @@
       "Bash(powershell -Command \"Remove-Item -Recurse -Force 'C:\\\\Users\\\\Orhay\\\\git\\\\blog\\\\.claude\\\\worktrees\\\\add-time-field-for-sorting'\" && git worktree prune && git branch -D worktree-add-time-field-for-sorting)",
       "Bash(rm -f claude-code-config-guide-hero.webp claude-code-config-guide-hero-v2.webp claude-code-config-guide-hero-v2.png claude-code-config-guide-hero-v3.png)",
       "Bash(mv claude-code-config-guide-hero-v3.webp claude-code-config-guide-hero.webp)",
-      "Bash(C:/Users/Orhay/git/blog/.worktrees/sidebar-design/.env.example:*)"
+      "Bash(C:/Users/Orhay/git/blog/.worktrees/sidebar-design/.env.example:*)",
+      "Bash(PYTHONIOENCODING=utf-8 python \"C:/Users/Orhay/.claude/skills/skill-creator/scripts/init_skill.py\" photo-edit --path \"C:/Users/Orhay/.claude/skills/\")",
+      "Bash(mkdir -p \"C:/Users/Orhay/git/blog/.worktrees/photo-analysis-prompts/.claude/skills/photo-edit/scripts\")",
+      "Bash(mkdir -p \"C:/Users/Orhay/git/blog/.worktrees/photo-analysis-prompts/.claude/skills/photo-edit/references\")",
+      "Bash(cp \"C:/Users/Orhay/.claude/skills/photo-edit/SKILL.md\" \"C:/Users/Orhay/git/blog/.worktrees/photo-analysis-prompts/.claude/skills/photo-edit/SKILL.md\")",
+      "Bash(cp \"C:/Users/Orhay/.claude/skills/photo-edit/scripts/extract.py\" \"C:/Users/Orhay/git/blog/.worktrees/photo-analysis-prompts/.claude/skills/photo-edit/scripts/extract.py\")",
+      "Bash(cp \"C:/Users/Orhay/.claude/skills/photo-edit/references/prompts.md\" \"C:/Users/Orhay/git/blog/.worktrees/photo-analysis-prompts/.claude/skills/photo-edit/references/prompts.md\")",
+      "Bash(mkdir -p \"C:/Users/Orhay/git/blog/.claude/skills/photo-edit/scripts\" \"C:/Users/Orhay/git/blog/.claude/skills/photo-edit/references\")",
+      "Bash(cp \"C:/Users/Orhay/.claude/skills/photo-edit/SKILL.md\" \"C:/Users/Orhay/git/blog/.claude/skills/photo-edit/SKILL.md\")",
+      "Bash(cp \"C:/Users/Orhay/.claude/skills/photo-edit/scripts/extract.py\" \"C:/Users/Orhay/git/blog/.claude/skills/photo-edit/scripts/extract.py\")",
+      "Bash(cp \"C:/Users/Orhay/.claude/skills/photo-edit/references/prompts.md\" \"C:/Users/Orhay/git/blog/.claude/skills/photo-edit/references/prompts.md\")",
+      "Bash(cp \"C:/Users/Orhay/git/blog/.claude/skills/photo-edit/scripts/extract.py\" \"C:/Users/Orhay/.claude/skills/photo-edit/scripts/extract.py\")",
+      "Bash(cp \"C:/Users/Orhay/git/blog/.claude/skills/photo-edit/scripts/extract.py\" \"C:/Users/Orhay/git/blog/.worktrees/photo-analysis-prompts/.claude/skills/photo-edit/scripts/extract.py\")"
     ]
   }
 }
