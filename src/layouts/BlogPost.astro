@@ -30,8 +30,25 @@ function formatDate(date: Date): string {
   });
 }
 ---
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} ogType="article" articleDate={pubDate.toISOString()}>
   <Header slot="header" />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "datePublished": pubDate.toISOString(),
+    ...(updatedDate && { "dateModified": updatedDate.toISOString() }),
+    "author": {
+      "@type": "Person",
+      "name": "Orhay Benaim",
+      "url": "https://orhaybenaim.github.io/blog/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Orhay Benaim"
+    }
+  })} />
   <article class="glass-article">
     <header class="post-header">
       <h1>{title}</h1>
