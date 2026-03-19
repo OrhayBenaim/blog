@@ -1,5 +1,5 @@
 ---
-title: "AI Photo Editing with Structured Prompts: Edit What You Want, Keep the Rest"
+title: "AI Photo Editing Without the Chaos: A Structured Prompt Workflow"
 description: "Stop getting completely different images when you ask AI for one change. This AI photo editing workflow uses structured JSON prompts to edit lighting, mood, or branding while keeping the rest of your scene intact."
 pubDate: 2026-03-19
 pubTime: "20:00"
