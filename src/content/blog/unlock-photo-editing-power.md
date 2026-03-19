@@ -114,6 +114,28 @@ I pasted the original image plus this modified JSON into Nano Banana. Here's the
 
 Same room. Same furniture. Same composition. Same camera angle. Only the lighting changed. That's what photo editing with AI looks like when you use structured prompts instead of guessing.
 
+## Same Room, Different Sofa
+
+Lighting is one dimension. But this works for anything the extraction prompts can capture. Here's another example using the same room. This time I extracted the objects and changed just the sofa, from the original grey linen to an olive green textured velvet.
+
+Here's the relevant part of the modified JSON:
+
+```json
+{
+  "name": "L-shaped Sectional Sofa",
+  "colour": "Olive green",
+  "material": "Textured velvet fiber",
+  "position_in_room": "Center-left, primary seating area",
+  "lighting_position": "Under ceiling spotlights"
+}
+```
+
+Two fields changed. Color and material. Everything else in the scene stayed exactly where it was.
+
+![The same living room with the sofa changed from grey linen to olive green velvet, all other furniture and decor unchanged](/blog/blog/photo-editing-workflow-sofa.webp)
+
+Same coffee table. Same rug. Same gallery wall. Same plant in the corner. The sofa is different and nothing else moved. You're not regenerating a room. You're swapping one object's properties in a JSON file and letting the AI handle the rest.
+
 ## Four JSON Extraction Prompts for Any Photo
 
 Lighting is just one dimension. There are four specialized extraction prompts, each designed to break down a different aspect of any photo into structured, editable JSON. You've already seen the lighting one in action. Here are all four.
