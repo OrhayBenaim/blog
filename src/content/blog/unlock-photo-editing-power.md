@@ -136,9 +136,17 @@ Two fields changed. Color and material. Everything else in the scene stayed exac
 
 Same coffee table. Same rug. Same gallery wall. Same plant in the corner. The sofa is different and nothing else moved. You're not regenerating a room. You're swapping one object's properties in a JSON file and letting the AI handle the rest.
 
-## Four JSON Extraction Prompts for Any Photo
+## Five JSON Extraction Prompts for Any Photo
 
-Lighting is just one dimension. There are four specialized extraction prompts, each designed to break down a different aspect of any photo into structured, editable JSON. You've already seen the lighting one in action. Here are all four.
+These are the five specialized extraction prompts that power this workflow. Each one breaks down a different aspect of any photo into structured, editable JSON. You've already seen lighting and objects in action above. Here's the full toolkit.
+
+**General Scene & Objects**
+
+This is the starting point. It extracts the room style, color palette, and every object with its color, material, and position. This is the prompt I used for the sofa swap example above.
+
+```
+Analyze the interior design image and convert all visual information into highly detailed structured JSON format. Focus specifically on isolating individual objects and lighting placements. For each key object, extract its precise colour (using descriptive names or hex codes) and its exact material (eg. matte leather, brushed steel, oak wood). Include JSON keys for 'room_style', 'overall_colour_palette', and an 'object' array containing 'name','colour','material', 'position_in_room' and 'lighting_position'. Output ONLY valid JSON and format the output as a copyable JSON code block using Markdown.
+```
 
 **Lighting & Time of Day**
 
