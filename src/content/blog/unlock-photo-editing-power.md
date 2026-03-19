@@ -215,3 +215,11 @@ JSON is precise. Natural language is vague. When you say "make it darker," the A
 You're not describing what you want in words and hoping the AI gets it. You're giving it a structured blueprint. The image stays the same. Only the fields you changed are different.
 
 This is what controlled editing looks like. Not "make it nighttime." Instead: swap the light sources, shift the shadows, change the mood. Same scene, different atmosphere. Every time.
+
+## Try It Yourself
+
+Everything in this post, the extraction, the JSON editing, the regeneration, we turned it into a Claude Code skill called `/photo-edit`. You run it from the terminal, point it at an image, pick one of five extraction prompts, and get back structured JSON describing your photo. Then you tell it what to change in plain English. It rewrites the JSON and sends it to Nano Banana to generate the new image. The whole loop takes a few seconds.
+
+The skill lives in the repo. Grab it, try it on your own photos, break it, make it better.
+
+<a href="https://github.com/OrhayBenaim/blog/tree/main/.claude/skills/photo-edit" target="_blank" rel="noopener noreferrer">photo-edit skill on GitHub</a>

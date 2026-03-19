@@ -21,16 +21,24 @@ from google.genai import types
 def get_client():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        env_path = os.path.join(os.getcwd(), ".env")
-        if os.path.exists(env_path):
-            with open(env_path) as f:
-                for line in f:
-                    line = line.strip()
-                    if line.startswith("GEMINI_API_KEY="):
-                        api_key = line.split("=", 1)[1].strip().strip('"').strip("'")
-                        break
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        candidate_paths = [
+            os.path.join(os.getcwd(), ".env"),
+            os.path.join(script_dir, ".env"),
+            os.path.join(os.getcwd(), ".claude", "skills", "photo-edit", ".env"),
+        ]
+        for env_path in candidate_paths:
+            if os.path.exists(env_path):
+                with open(env_path) as f:
+                    for line in f:
+                        line = line.strip()
+                        if line.startswith("GEMINI_API_KEY="):
+                            api_key = line.split("=", 1)[1].strip().strip("'\"")
+                            break
+            if api_key:
+                break
     if not api_key:
-        print("Error: GEMINI_API_KEY not set", file=sys.stderr)
+        print("Error: GEMINI_API_KEY not set and not found in .env", file=sys.stderr)
         sys.exit(1)
     return genai.Client(api_key=api_key)
 
@@ -61,7 +69,7 @@ def main():
     prompt = args.prompt + "\n\nReturn ONLY valid JSON. No markdown formatting, no code blocks, just raw JSON."
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         contents=[
             types.Content(parts=[
                 types.Part(inline_data=types.Blob(mime_type=mime_type, data=image_data)),
